@@ -1,0 +1,15 @@
+O editor gráfico vetorial diferente do "Dia" que eu escolhi foi o Inkscape.
+
+
+
+1. As outras operações gráficas comuns são : Ferramenta de medida , coordenadas (x,y,z) , Mão livre e lata de tinta.
+	A ferramenta de medida é uma operação utlizidada para medir diferentes figuras dando assim a possibilidade de medir o comprimento, largura entre outras coisas da figura tendo sua unidade de medida(px).
+	As coordenadas (x,y,z) é uma operação utilizada para modificar as coordenadas de cada um dos eixos dando assim um maior controle sobre os eixos e suas figuras
+	A mão livre é uma operação utilizada para desenhar linhas livrimentes fazendo linhas do jeito que você quiser dando a você mais possibilidades e construção de diferentes figuras.
+	A lata de tinta é uma operação em que é utilizada para preencher de cor um fundo de uma área fechada pintando toda de uma vez. E todas essas operações são comuns em diversos editores e o comportamento esperado de cada uma delas falado nos parágrafos acima.
+
+2. Nesse editor gráfico as figuras geométricas compartilham os atributos : localização , design , tamanho , ajustes e redimensionamento.
+
+3. Nesse editor gráfico temos as de 1D como as linhas onde seus atributos são ser aberta ,ou seja, não tem nem área e  nem volume e o outro atributo seria expessura da própria linha , 
+já as  2D como  o circulo onde temos seus atributos a área da figura e  o diâmetro já as 3D temos como exemplo o cubo que um dos seus atributos é o volume e o outro atributo  é ter todos as suas arestas iguais. 
+
