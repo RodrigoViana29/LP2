@@ -9,14 +9,23 @@ Esté é um programa que cria retâmgulos , linhas , elipses e triângulos atrav
 Ações no programa(Comandos):
 
 Botão esquerdo do mouse: seleciona uma figura ou um botão. No caso de um botão selecionado, clicar novamente em uma região vazia cria a figura selecionada; no caso da figura, permite editá-la.
+
 DEL: deleta a figura selecionada.
+
 TAB: troca para a próxima figura selecionada.
+
 PAGEUP e PAGEDOWN: alternam a cor do interior das figuras com as possíveis cores: branco, cinza, magenta, azul, ciano, verde, amarelo, laranja, vermelho, cinza escuro e preto.
+
 VIRGULA e PONTO: alternam a cor da borda das figuras com as mesmas cores faladas no comando acima.
+
 UP, DOWN, LEFT, RIGHT: movem a figura poucas posições para a direção selecionada.
+
 R: cria um retângulo na posição do mouse.
+
 E: cria uma elipse na posição do mouse.
+
 T: cria um triângulo na posição do mouse.
+
 L: cria um segmento de reta na posição do mouse.
 
 
