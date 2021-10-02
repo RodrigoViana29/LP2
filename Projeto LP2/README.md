@@ -1,7 +1,7 @@
 #Informações do projeto:
 
 A janela por padrão abre de acordo com a resolução do monitor se tiver mais de um no monitor padrão.
-Cria um arquivo onde salva as figuras criadas no programa e são carregadas quando abre o programa novamente.
+Cria um arquivo bin onde salva as figuras criadas no programa e são carregadas quando abre o programa novamente.
 Esté é um programa que cria retâmgulos , linhas , elipses e triângulos através das teclas ou pelo butão do mouse aonde está o mouse e também deleta figuras criada além de permitir mover e pintar as figuras.
 
 
