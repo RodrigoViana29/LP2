@@ -7,18 +7,18 @@ public class Line extends Figure {
     private int x1, y1;
     private int x2, y2;
     private int size;
-    private Color borderColor;
+    private Color bdColor;
     Line2D line;
     
-    public Line(int x1, int y1, int size, Color borderColor) {
-        super(0, 0, 0, 0, borderColor, borderColor);
+    public Line(int x1, int y1, int size, Color bdColor) {
+        super(0, 0, 0, 0, bdColor, bdColor);
 
         this.x1 = x1;
         this.y1 = y1;
         this.x2 = x1 + 2*size;
         this.y2 = y1;
         this.size = size;
-        this.borderColor = borderColor;
+        this.bdColor = bdColor;
 
         this.line = new Line2D.Float(this.x1, this.y1, this.x2, this.y2); 
     }
@@ -31,7 +31,7 @@ public class Line extends Figure {
         this.x2 = x1 + 2*size;
         this.y2 = y1;
         this.size = size;
-        this.borderColor = Color.BLACK;
+        this.bdColor = Color.BLACK;
 
         this.line = new Line2D.Float(this.x1, this.y1, this.x2, this.y2); 
     }
@@ -42,7 +42,7 @@ public class Line extends Figure {
         
         g2d.setStroke(new BasicStroke(2.5f));
 
-        g2d.setColor(borderColor);
+        g2d.setColor(bdColor);
         g2d.drawLine(this.x1, this.y1, this.x2, this.y2);
     }
 
