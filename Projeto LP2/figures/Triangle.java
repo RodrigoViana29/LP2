@@ -6,12 +6,12 @@ public class Triangle extends Figure {
     Polygon triangle;
     int xArray[], yArray[];
 
-    public Triangle(int x, int y, int width, int height, Color borderColor, Color fillColor) {
-        super(x, y, width, height, borderColor, fillColor);
+    public Triangle(int x, int y, int w, int h, Color bdColor, Color flColor) {
+        super(x, y, w, h, bdColor, flColor);
     }
 
-    public Triangle(int x, int y, int width, int height) {
-        super(x, y, width, height, Color.BLACK, Color.WHITE);
+    public Triangle(int x, int y, int w, int h) {
+        super(x, y, w, h, Color.BLACK, Color.WHITE);
     }
 
     @Override
@@ -21,9 +21,9 @@ public class Triangle extends Figure {
         int x1 = this.x;
         int y1 = this.y;
         int x2 = x1;
-        int y2 = y1 + this.height;
-        int x3 = x1 + this.width;
-        int y3 = y1 + this.height;
+        int y2 = y1 + this.h;
+        int x3 = x1 + this.w;
+        int y3 = y1 + this.h;
 
         int xValues[] = {x1, x2, x3};
         int yValues[] = {y1, y2, y3};
@@ -35,10 +35,10 @@ public class Triangle extends Figure {
         
         g2d.setStroke(new BasicStroke(defaultThickness));
 
-        g2d.setColor(fillColor);
+        g2d.setColor(flColor);
         g2d.fillPolygon(this.triangle);
 
-        g2d.setColor(borderColor);
+        g2d.setColor(bdColor);
         g2d.drawPolygon(this.triangle);
     }
 
@@ -67,12 +67,12 @@ public class Triangle extends Figure {
         Point pointToResize = new Point(this.xArray[2], this.yArray[2]);
 
         if (pointToResize.distance(mousePointPosition) <= 5) {
-            if (this.width + dx >= 10) {
-                this.width += dx;
+            if (this.w + dx >= 10) {
+                this.w += dx;
             }
 
-            if (this.height + dy >= 10) {
-                this.height += dy;
+            if (this.h + dy >= 10) {
+                this.h += dy;
             }
         } else {
             move(dx, dy);
@@ -81,9 +81,9 @@ public class Triangle extends Figure {
         int x1 = this.x;
         int y1 = this.y;
         int x2 = x1;
-        int y2 = y1 + this.height;
-        int x3 = x1 + this.width;
-        int y3 = y1 + this.height;
+        int y2 = y1 + this.h;
+        int x3 = x1 + this.w;
+        int y3 = y1 + this.h;
 
         int xValues[] = {x1, x2, x3};
         int yValues[] = {y1, y2, y3};
