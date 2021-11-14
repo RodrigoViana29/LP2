@@ -6,35 +6,35 @@ import java.awt.geom.Ellipse2D;
 public class Ellipse extends Figure {
     Ellipse2D ellipse;
 
-    public Ellipse(int x, int y, int width, int height, Color borderColor, Color fillColor) {
-        super(x, y, width, height, borderColor, fillColor);
+    public Ellipse(int x, int y, int w, int h, Color bdColor, Color flColor) {
+        super(x, y, w, h, bdColor, flColor);
 
-        this.ellipse = new Ellipse2D.Float(x, y, width, height);
+        this.ellipse = new Ellipse2D.Float(x, y, w, h);
     }
 
-    public Ellipse(int x, int y, int width, int height) {
-        super(x, y, width, height, Color.BLACK, Color.WHITE);
+    public Ellipse(int x, int y, int w, int h) {
+        super(x, y, w, h, Color.BLACK, Color.WHITE);
 
-        this.ellipse = new Ellipse2D.Float(x, y, width, height);
+        this.ellipse = new Ellipse2D.Float(x, y, w, h);
     }
 
     @Override
     public void Paint(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
 
-        this.ellipse = new Ellipse2D.Double(this.x, this.y, this.width, this.height);
+        this.ellipse = new Ellipse2D.Double(this.x, this.y, this.w, this.h);
 
         g2d.setStroke(new BasicStroke(defaultThickness*3/2));
 
-        g2d.setColor(borderColor);
+        g2d.setColor(bdColor);
         g2d.draw(ellipse);
 
-        g2d.setColor(fillColor);
+        g2d.setColor(flColor);
         g2d.fill(ellipse);
     }
 
     public boolean IsInsideFigure(Point mousePointPosition) {
-        return (mousePointPosition.x >= this.x) && (mousePointPosition.x <= this.x + this.width) && (mousePointPosition.y >= this.y) && (mousePointPosition.y <= this.y + this.height);
+        return (mousePointPosition.x >= this.x) && (mousePointPosition.x <= this.x + this.w) && (mousePointPosition.y >= this.y) && (mousePointPosition.y <= this.y + this.h);
     }
 
     public void applyRedSelection(Graphics g) {
@@ -48,20 +48,20 @@ public class Ellipse extends Figure {
 
     @Override
     public void dragFigure(Point mousePointPosition, int dx, int dy) {
-        Point pointToResize = new Point(this.x + this.width, this.y + this.height);
+        Point pointToResize = new Point(this.x + this.w, this.y + this.h);
 
         if (pointToResize.distance(mousePointPosition) <= 5) {
-            if (this.width + dx >= 10) {
-                this.width += dx;
+            if (this.w + dx >= 10) {
+                this.w += dx;
             }
 
-            if (this.height + dy >= 10) {
-                this.height += dy;
+            if (this.h + dy >= 10) {
+                this.h += dy;
             }
         } else {
             move(dx, dy);
         }
 
-        this.ellipse.setFrame(this.x, this.y, this.width, this.height);
+        this.ellipse.setFrame(this.x, this.y, this.w, this.h);
     }
 }
