@@ -57,37 +57,37 @@ public class KeyButtonHandler {
                 figures.remove(selectedFigure);        
                 selectedFigure = null; 
             } else if (keyEvent.getKeyCode() == KeyButtons.PAGEUP) {
-                selectedFigure.fillColorIndex++;
+                selectedFigure.flColorIndex++;
 
-                if (selectedFigure.fillColorIndex > 10) {
-                    selectedFigure.fillColorIndex %= 11;
+                if (selectedFigure.flColorIndex > 10) {
+                    selectedFigure.flColorIndex %= 11;
                 }
 
-                selectedFigure.applyFillColorChange();
+                selectedFigure.applyFlColorChange();
             } else if (keyEvent.getKeyCode() == KeyButtons.PAGEDOWN) {
-                selectedFigure.fillColorIndex--;
+                selectedFigure.flColorIndex--;
 
-                if (selectedFigure.fillColorIndex < 0) {
-                    selectedFigure.fillColorIndex += 11;
+                if (selectedFigure.flColorIndex < 0) {
+                    selectedFigure.flColorIndex += 11;
                 }
 
-                selectedFigure.applyFillColorChange();
+                selectedFigure.applyFlColorChange();
             } else if (keyEvent.getKeyCode() == KeyButtons.PERIOD) {
-                selectedFigure.borderColorIndex++;
+                selectedFigure.bdColorIndex++;
 
-                if (selectedFigure.borderColorIndex > 10) {
-                    selectedFigure.borderColorIndex %= 11;
+                if (selectedFigure.bdColorIndex > 10) {
+                    selectedFigure.bdColorIndex %= 11;
                 }
 
-                selectedFigure.applyBorderColorChange();
+                selectedFigure.applyBdColorChange();
             } else if (keyEvent.getKeyCode() == KeyButtons.COMMA) {
-                selectedFigure.borderColorIndex--;
+                selectedFigure.bdColorIndex--;
 
-                if (selectedFigure.borderColorIndex < 0) {
-                    selectedFigure.borderColorIndex += 11;
+                if (selectedFigure.bdColorIndex < 0) {
+                    selectedFigure.bdColorIndex += 11;
                 }
 
-                selectedFigure.applyBorderColorChange();
+                selectedFigure.applyBdColorChange();
             }
         }
 
