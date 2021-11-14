@@ -10,29 +10,29 @@ import java.io.*;
 import interfaces.IVisible;
 
 public abstract class Figure implements IVisible, Serializable {
-    protected Color borderColor;
-    protected Color fillColor;
+    protected Color bdColor;
+    protected Color flColor;
     protected int x, y;
-    protected int width, height;
+    protected int w, h;
     protected static float defaultThickness = 2.5f;
-    public int fillColorIndex = 0;
-    public int borderColorIndex = 10;
+    public int flColorIndex = 0;
+    public int bdColorIndex = 10;
 
-    ArrayList<Color> fillColorPallet = new ArrayList<Color>(
+    ArrayList<Color> flColorPallet = new ArrayList<Color>(
         Arrays.asList(Color.WHITE, Color.GRAY, Color.MAGENTA, Color.BLUE, Color.CYAN, Color.GREEN, Color.YELLOW, Color.ORANGE, Color.RED, Color.DARK_GRAY, Color.BLACK));
 
-    ArrayList<Color> borderColorPallet = new ArrayList<Color>(
+    ArrayList<Color> bdColorPallet = new ArrayList<Color>(
         Arrays.asList(Color.WHITE, Color.GRAY, Color.MAGENTA, Color.BLUE, Color.CYAN, Color.GREEN, Color.YELLOW, Color.ORANGE, Color.RED, Color.DARK_GRAY, Color.BLACK));
 
-    protected Figure(int x, int y, int width, int height, Color borderColor, Color fillColor) {
+    protected Figure(int x, int y, int w, int h, Color bdColor, Color flColor) {
         this.x = x;
         this.y = y;
 
-        this.width = width;
-        this.height = height;
+        this.w = w;
+        this.h = h;
         
-        this.borderColor = borderColor;
-        this.fillColor = fillColor;
+        this.bdColor = bdColor;
+        this.flColor = flColor;
     }
 
     public abstract void Paint(Graphics g);
@@ -45,7 +45,7 @@ public abstract class Figure implements IVisible, Serializable {
         g2d.setStroke(new BasicStroke(1.5f));
 
         g2d.setColor(Color.RED);
-        g2d.drawRect(this.x, this.y, this.width, this.height);
+        g2d.drawRect(this.x, this.y, this.w, this.h);
     }
 
     public abstract void dragFigure(Point mousePointPosition, int dx, int dy);
@@ -65,11 +65,11 @@ public abstract class Figure implements IVisible, Serializable {
         }
     }
 
-    public void applyFillColorChange() {
-        this.fillColor = this.fillColorPallet.get(this.fillColorIndex);
+    public void applyFlColorChange() {
+        this.flColor = this.flColorPallet.get(this.flColorIndex);
     }   
 
-    public void applyBorderColorChange() {
-        this.borderColor = this.borderColorPallet.get(this.borderColorIndex);
+    public void applyBdColorChange() {
+        this.bdColor = this.bdColorPallet.get(this.bdColorIndex);
     }   
 }
